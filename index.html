@@ -1,24 +1,29 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> <!--CHAMPA KING-->
+<!DOCTYPE html>                          <!-- Khai báo đây là tài liệu HTML5 -->
+<html lang="vi">                         <!-- Thẻ gốc, ngôn ngữ trang là tiếng Việt -->
+<head>                                   <!-- Phần đầu trang (không hiển thị) -->
+  <meta charset="utf-8">                 <!-- Hỗ trợ tiếng Việt và ký tự đặc biệt -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+                                         <!-- Giúp trang hiển thị tốt trên điện thoại -->
+  <title> <!--CHAMPA KING-->             <!-- Tiêu đề trang (hiện trên tab trình duyệt) -->
     
   </title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css"> <!-- Liên kết file CSS bên ngoài -->
 </head>
-<body>
+<body>                                   <!-- Phần thân trang (nội dung hiển thị) -->
 
-<div class="tab">
-  <a href="kho.html">Kho video của CHAMPA KING</a>
+<div class="tab">                        <!-- Thanh tab ở trên cùng -->
+  <a href="kho.html">Kho video của CHAMPA KING</a>  
+                                         <!-- Link dẫn đến trang kho video -->
 </div>
 
-<div id="feed"></div>
+<div id="feed"></div>                    <!-- Vùng chứa danh sách video (sẽ được JS đổ dữ liệu vào) -->
 
-<div class="upload-btn" id="uploadBtn">+</div>
-<input type="file" accept="video/*" id="upload" style="display:none">
+<div class="upload-btn" id="uploadBtn">+</div>  
+                                         <!-- Nút hình tròn màu vàng để đăng video -->
 
-<script src="script.js"></script>
+<input type="file" accept="video/*" id="upload" style="display:none">  
+                                         <!-- Ô chọn file video (ẩn đi, chỉ hiện khi bấm nút +) -->
+
+<script src="script.js"></script>        <!-- Liên kết file JavaScript bên ngoài -->
 </body>
-</html>
+</html>                                  <!-- Kết thúc trang HTML -->
