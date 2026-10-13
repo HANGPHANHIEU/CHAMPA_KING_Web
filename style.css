@@ -1,73 +1,82 @@
+/* Reset toàn bộ phần tử */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;                    /* Xóa khoảng cách bên ngoài */
+  padding: 0;                   /* Xóa khoảng cách bên trong */
+  box-sizing: border-box;       /* Tính kích thước bao gồm border + padding */
 }
 
+/* Thiết lập body */
 body {
-  background: #000;
-  color: white;
-  font-family: sans-serif;
-  overflow: hidden;
+  background: #000;             /* Nền màu đen */
+  color: white;                 /* Màu chữ mặc định trắng */
+  font-family: sans-serif;      /* Font chữ không chân */
+  overflow: hidden;             /* Ẩn thanh cuộn của body */
 }
 
+/* Vùng chứa danh sách video */
 #feed {
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  height: 100vh;                /* Chiều cao bằng 100% màn hình */
+  scroll-snap-type: y mandatory; /* Bật hiệu ứng snap theo chiều dọc */
+  overflow-y: scroll;           /* Cho phép cuộn dọc */
 }
 
+/* Mỗi video chiếm full màn hình */
 .video {
-  height: 100vh;
-  scroll-snap-align: start;
-  position: relative;
+  height: 100vh;                /* Chiều cao full màn hình */
+  scroll-snap-align: start;     /* Snap căn theo cạnh trên */
+  position: relative;           /* Để phần tử con định vị tuyệt đối bên trong */
 }
 
+/* Thẻ video */
 video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 100%;                  /* Chiều rộng 100% */
+  height: 100%;                 /* Chiều cao 100% */
+  object-fit: cover;            /* Cắt video để full khung, không méo */
 }
 
+/* Lớp phủ thông tin trên video (like, comment...) */
 .overlay {
-  position: absolute;
-  bottom: 20px;
-  right: 15px;
-  text-align: right;
+  position: absolute;           /* Định vị tuyệt đối */
+  bottom: 20px;                 /* Cách đáy 20px */
+  right: 15px;                  /* Cách phải 15px */
+  text-align: right;            /* Căn chữ sang phải */
 }
 
+/* Nút đăng video (hình tròn vàng) */
 .upload-btn {
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #D4AF37;
-  color: #000;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  font-size: 40px;
-  line-height: 60px;
-  text-align: center;
-  z-index: 100;
-  cursor: pointer;
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.6);
+  position: fixed;              /* Cố định trên màn hình */
+  bottom: 30px;                 /* Cách đáy 30px */
+  left: 50%;                    /* Đặt giữa theo chiều ngang */
+  transform: translateX(-50%);  /* Căn chính giữa chính xác */
+  background: #D4AF37;          /* Màu nền vàng gold */
+  color: #000;                  /* Màu chữ đen */
+  width: 60px;                  /* Chiều rộng 60px */
+  height: 60px;                 /* Chiều cao 60px */
+  border-radius: 50%;           /* Bo tròn thành hình tròn */
+  font-size: 40px;              /* Cỡ chữ lớn (thường là dấu +) */
+  line-height: 60px;            /* Căn giữa theo chiều dọc */
+  text-align: center;           /* Căn giữa theo chiều ngang */
+  z-index: 100;                 /* Nằm trên tất cả phần tử khác */
+  cursor: pointer;              /* Con trỏ thành bàn tay khi hover */
+  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.6); /* Bóng đổ màu vàng */
 }
 
+/* Thanh tab ở trên cùng */
 .tab {
-  position: fixed;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  padding: 12px 25px;
-  border-radius: 30px;
-  z-index: 99;
-  backdrop-filter: blur(10px);
+  position: fixed;              /* Cố định trên màn hình */
+  top: 15px;                    /* Cách đỉnh 15px */
+  left: 50%;                    /* Đặt giữa theo chiều ngang */
+  transform: translateX(-50%);  /* Căn chính giữa */
+  background: rgba(0, 0, 0, 0.8); /* Nền đen mờ 80% */
+  padding: 12px 25px;           /* Khoảng đệm trong */
+  border-radius: 30px;          /* Bo góc rất tròn */
+  z-index: 99;                  /* Nằm trên video, dưới nút upload */
+  backdrop-filter: blur(10px);  /* Hiệu ứng làm mờ nền phía sau */
 }
 
+/* Link bên trong tab */
 .tab a {
-  color: #D4AF37;
-  text-decoration: none;
-  font-weight: bold;
+  color: #D4AF37;               /* Màu chữ vàng gold */
+  text-decoration: none;        /* Bỏ gạch chân */
+  font-weight: bold;            /* Chữ in đậm */
 }
